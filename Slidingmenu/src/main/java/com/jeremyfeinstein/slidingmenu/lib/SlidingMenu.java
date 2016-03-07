@@ -1,7 +1,5 @@
 package com.jeremyfeinstein.slidingmenu.lib;
 
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -28,6 +26,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.jeremyfeinstein.slidingmenu.lib.CustomViewAbove.OnPageChangeListener;
+
+import java.lang.reflect.Method;
 
 public class SlidingMenu extends RelativeLayout {
 
@@ -89,7 +89,7 @@ public class SlidingMenu extends RelativeLayout {
 	 * The listener interface for receiving onOpen events. The class that is
 	 * interested in processing a onOpen event implements this interface, and
 	 * the object created with that class is registered with a component using
-	 * the component's <code>addOnOpenListener<code> method. When
+	 * the component's <code>addOnOpenListener</code> method. When
 	 * the onOpen event occurs, that object's appropriate
 	 * method is invoked
 	 */
@@ -105,11 +105,10 @@ public class SlidingMenu extends RelativeLayout {
 	 * The listener interface for receiving onOpened events. The class that is
 	 * interested in processing a onOpened event implements this interface, and
 	 * the object created with that class is registered with a component using
-	 * the component's <code>addOnOpenedListener<code> method. When
+	 * the component's <code>addOnOpenedListener</code> method. When
 	 * the onOpened event occurs, that object's appropriate
 	 * method is invoked.
 	 * 
-	 * @see OnOpenedEvent
 	 */
 	public interface OnOpenedListener {
 
@@ -123,11 +122,10 @@ public class SlidingMenu extends RelativeLayout {
 	 * The listener interface for receiving onClose events. The class that is
 	 * interested in processing a onClose event implements this interface, and
 	 * the object created with that class is registered with a component using
-	 * the component's <code>addOnCloseListener<code> method. When
+	 * the component's <code>addOnCloseListener</code> method. When
 	 * the onClose event occurs, that object's appropriate
 	 * method is invoked.
 	 * 
-	 * @see OnCloseEvent
 	 */
 	public interface OnCloseListener {
 
@@ -141,11 +139,10 @@ public class SlidingMenu extends RelativeLayout {
 	 * The listener interface for receiving onClosed events. The class that is
 	 * interested in processing a onClosed event implements this interface, and
 	 * the object created with that class is registered with a component using
-	 * the component's <code>addOnClosedListener<code> method. When
+	 * the component's <code>addOnClosedListener</code> method. When
 	 * the onClosed event occurs, that object's appropriate
 	 * method is invoked.
 	 * 
-	 * @see OnClosedEvent
 	 */
 	public interface OnClosedListener {
 
@@ -441,7 +438,7 @@ public class SlidingMenu extends RelativeLayout {
 	/**
 	 * Set the behind view (menu) content to the given View.
 	 * 
-	 * @param view
+	 * @param v
 	 *            The desired content to display.
 	 */
 	public void setMenu(View v) {
@@ -472,7 +469,7 @@ public class SlidingMenu extends RelativeLayout {
 	/**
 	 * Set the secondary behind view (right menu) content to the given View.
 	 * 
-	 * @param view
+	 * @param v
 	 *            The desired content to display.
 	 */
 	public void setSecondaryMenu(View v) {
