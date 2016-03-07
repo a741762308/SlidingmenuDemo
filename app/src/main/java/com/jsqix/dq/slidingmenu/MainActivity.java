@@ -2,14 +2,19 @@ package com.jsqix.dq.slidingmenu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 public class MainActivity extends AppCompatActivity {
     private SlidingMenu menu;
     private ImageView topLeft, topRight;
+    private PasswordInputView passwordInputView;
+    private TextView pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,27 @@ public class MainActivity extends AppCompatActivity {
         topLeft.setOnClickListener(myClick);
         topRight = (ImageView) findViewById(R.id.top_right);
         topRight.setOnClickListener(myClick);
+        passwordInputView= (PasswordInputView) findViewById(R.id.password_edit);
+        pass= (TextView) findViewById(R.id.password_txt);
+        passwordInputView.setPasswordLength(6);
+        TextWatcher watcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                pass.setText(passwordInputView.getText());
+
+            }
+        };
+        passwordInputView.addTextChangedListener(watcher);
     }
 
     View.OnClickListener myClick = new View.OnClickListener() {
