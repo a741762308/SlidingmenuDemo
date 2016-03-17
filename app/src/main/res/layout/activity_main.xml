@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#efefef"
     android:clickable="true"
     android:orientation="vertical"
     tools:context="com.jsqix.dq.slidingmenu.MainActivity">
@@ -27,21 +28,24 @@
             android:src="@mipmap/ic_more" />
     </RelativeLayout>
 
-    <com.jsqix.dq.slidingmenu.PasswordInputView
+    <com.jsqix.dq.slidingmenu.PasswordInputView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/password_edit"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="25dp"
         android:cursorVisible="false"
         android:inputType="number"
         android:maxLength="6"
-        android:padding="0dp" />
+        android:padding="0dp"
+        app:borderColor="#efefef"
+        app:solidColor="#ffffff" />
+
     <TextView
         android:id="@+id/password_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
